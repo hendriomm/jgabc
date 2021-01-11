@@ -2984,7 +2984,7 @@ $(function() {
     id: ""
   }].concat(miscChants).map(mapNameToTitle), $('#selCustom'));
   var $customTemplate = $('#divCustom');
-  $.each(['','asperges','offertorium','custom3','custom4','custom5', 'agnus','custom7','custom8','custom9','ite','custom11'], function(i, key) {
+  $.each(['','asperges','custom2','offertorium','custom4','custom5','custom6', 'agnus','custom8','custom9','custom10','ite','custom12'], function(i, key) {
     var $custom = $customTemplate;
     if (key) {
       $custom = $customTemplate.clone().insertAfter('div[part=' + key + ']');
@@ -3589,7 +3589,7 @@ $(function() {
         'tempus', 'yearNovus',
         'ordinary', 'custom1', 'custom2', 'custom3', 'custom4',
         'custom5', 'custom6', 'custom7', 'custom8',
-        'custom9', 'custom10', 'custom11', 'custom12',
+        'custom9', 'custom10', 'custom11', 'custom12','custom13'
       ].concat(ordinaryParts).forEach(function(key, i) {
         if (isPageLoad === true && (key in hash)) {
           var selector = '#divCustom1';
