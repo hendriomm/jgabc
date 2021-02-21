@@ -3230,7 +3230,7 @@ $(function() {
     if (e && typeof(e.preventDefault) == "function") {
       e.preventDefault();
     }
-    $('#pdfForm').attr('action', 'https://apps.illuminarepublications.com/gregorio/#' + encodeURI(result)).submit();
+    $('#pdfForm').attr('action', 'https://editor.sourceandsummit.com/alpha/#' + encodeURI(result)).submit();
   });
   $('#lnkPdfDirect').click(function(e) {
     var gabcs = getAllGabc();
