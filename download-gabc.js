@@ -519,18 +519,17 @@ modes.forEach(m => m.sort && m.sort((a,b) => a-b));
           fs.writeFileSync('gabc-files.html', gabcUrls);
 
           fs.writeFileSync('miscChants.js', `litanyMap=${JSON.stringify(litanies)};
-miscChants=${JSON.stringify(miscChants)}`);
+                                             miscChants=${JSON.stringify(miscChants)}`);
           fs.writeFileSync('texts.js', `texts = ${JSON.stringify(texts,null, '\t')};`);
           fs.writeFileSync('incipits.js', `pages = ${JSON.stringify(pages)};
-modes = ${JSON.stringify(modes)};
-incipits = ${JSON.stringify(incipits,null, '\t')};
-var module;
-if(module && module.exports) {
-  module.exports.incipits = incipits;
-  module.exports.pages = pages;
-  module.exports.models = modes;
-}
-`);
+                                           modes = ${JSON.stringify(modes)};
+                                           incipits = ${JSON.stringify(incipits,null, '\t')};
+                                          var module;
+                                          if(module && module.exports) {
+                                            module.exports.incipits = incipits;
+                                            module.exports.pages = pages;
+                                            module.exports.models = modes;
+                                          }`);
           console.info('Finished in ' + time + ' seconds!');
           console.info(`${countWithRef} / ${countAll} have reference.  (${Math.round(100 * countWithRef / countAll)}%)`);
           // console.info(replacements.join('\n\n'));
